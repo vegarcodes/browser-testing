@@ -1,4 +1,4 @@
-import runBrowserTests from "./testrunner.js";
+import runBrowserTests from "./runBrowserTests.js";
 
 const mathematicsTests = {
   name: "Matematikk",
@@ -16,7 +16,7 @@ const formTest = {
     const formElement = document.getElementById("contact-form");
     const firstNameElement = document.getElementById("first-name");
     const lastNameElement = document.getElementById("last-name");
-    const messageElement = document.getElementById("messagehhhhh");
+    const messageElement = document.getElementById("message");
     const submitButton = formElement.querySelector("button[type=submit]");
 
     assert(formElement !== null, "Kontaktskjemaet finnes på siden.");
