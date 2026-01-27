@@ -1,0 +1,22 @@
+{
+  "name": "browser-testing",
+  "version": "1.0.0",
+  "description": "Enkel og forståelig testing i browseren",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./app -p 12345 --cors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vegarcodes/browser-testing.git"
+  },
+  "author": "Vegar Norman <vegar.norman@gokstadakademiet.no>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vegarcodes/browser-testing/issues"
+  },
+  "homepage": "https://github.com/vegarcodes/browser-testing#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
