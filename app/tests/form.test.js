@@ -8,6 +8,7 @@
 const formTest = {
   name: "Test av kontaktskjema",
   runner: function (assert) {
+    /* Test om alle skjemafelter er til stede */
     const formElement = document.getElementById("contact-form");
     const firstNameElement = document.getElementById("first-name");
     const lastNameElement = document.getElementById("last-name");
@@ -19,6 +20,31 @@ const formTest = {
     assert(lastNameElement !== null, "Skjemafelt for etternavn finnes på siden.");
     assert(messageElement !== null, "Tekstområde for melding finnes på siden.");
     assert(submitButton !== null, "Innsendingsknapp finnes på siden.");
+
+
+    /* Test om skjemaet kan sendes inn uten å være fylt ut */
+    let didFormSubmit = false;
+
+    formElement.addEventListener("submit", event => {
+      event.preventDefault();
+      didFormSubmit = true;
+    });
+
+    submitButton.click();
+
+    assert(didFormSubmit === false, "Skjema blir ikke submitted når feltene ikke er fylt ut.");
+
+
+    /* Test om skjemaet kan sendes inn etter utfylling er gjort */
+    didFormSubmit = false;
+
+    firstNameElement.value = "Test";
+    lastNameElement.value = "Testesen";
+    messageElement.value = "Dette er en testmelding.";
+
+    submitButton.click();
+
+    assert(didFormSubmit === true, "Skjema blir submitted når feltene er fylt ut.");
   }
 }
 

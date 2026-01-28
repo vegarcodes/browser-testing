@@ -11,13 +11,13 @@
       <h1>Hallo, verden!</h1>
       <form name="contact-form" id="contact-form" action="/" method="GET">
         <label for="first-name">Fornavn:</label>
-        <input name="first-name" id="first-name" type="text" />
+        <input name="first-name" id="first-name" type="text" required />
         <br><br>
         <label for="last-name">Etternavn:</label>
-        <input name="last-name" id="last-name" type="text" />
+        <input name="last-name" id="last-name" type="text" required />
         <br><br>
         <label for="message">Melding:</label>
-        <textarea rows="10" id="message" name="message"></textarea>
+        <textarea rows="10" id="message" name="message" required></textarea>
         <br><br>
         <button type="submit">Send inn!</button>
       </form>
